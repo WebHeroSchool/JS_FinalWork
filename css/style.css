@@ -1,0 +1,136 @@
+body {
+  font-family: "Roboto";
+  background-image: url(../img/Background.png);
+  background-size: cover;
+  letter-spacing: 3px;
+}
+.wrapper {
+  color: #fff;
+  margin: 4%;
+}
+.description__sp {
+  font-size: 57px;
+  margin:0;
+  padding-bottom: 13px;
+}
+.description__rules {
+  font-size: 19px;
+  margin:0;
+}
+
+
+.level__active {
+  background-color: tomato;
+}
+
+
+
+
+
+
+.fruit_radio[type=radio] + .cont__level {
+  display: block;
+  margin-left: 50px;
+}
+
+.fruit_radio[type=radio] {
+  display: none;
+}
+
+.fruit_radio[type=radio] + .cont__level::before {
+  content: "";
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  transform: rotate(45deg);
+  color: transparent;
+  left: 5%;
+}
+
+.fruit_radio[type=radio]:checked + .cont__level::before {
+  background-color: red;
+}
+
+
+
+
+.cont {
+  margin: 50px;
+  position: relative;
+}
+.cont__level {
+  display: block;
+  font-size: 50px;
+  padding-bottom: 22px;
+}
+.game {
+  font-size: 27px;
+  background-color: red;
+  color: white;
+  padding: 32px 84px;
+  border-radius: 14px;
+  text-decoration: none;
+}
+.cart {
+  right: 13%;
+  position: absolute;
+  top: 45%;
+}
+.cart__right {
+  transform: rotate(12deg);
+}
+.cart__right_big {
+  transform: rotate(38deg);
+  position: relative;
+  right: 38px;
+}
+.active {
+  display: none;
+}
+
+.wrap-card {
+  display: flex;
+ 
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.active-back {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.card-turnoff:hover {
+  transform: rotate(5deg);
+  transition: transform 0.8s;
+}

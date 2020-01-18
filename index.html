@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bag Game</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+</head>
+<body>
+  <main class="wrapper" id="wrapper">
+    <form>
+      <legend class="description__sp">Выберите уровень сложности:
+          <p class="description__rules">Выберите сложность и игра начнется. Чем выше уровень - тем больше будет выборка карт.</p>
+      </legend>
+        <input type="radio" id="fruit1" name="fruit-1" class="fruit_radio" value="3" checked>
+          <label for="fruit1" class="cont__level level__jun" id="level" value="3">Простой</label>
+        <input type="radio" id="fruit2" name="fruit-1" class="fruit_radio" value="6">
+          <label for="fruit2" class="cont__level level__mid" id="level1" value="6">Средний</label>
+        <input type="radio" id="fruit3" name="fruit-1" class="fruit_radio" value="9">
+          <label for="fruit3" class="cont__level level__sen " id="level2" value="9">Сложный</label>
+        <a href="#" class="game" id="game">Начать игру</a>
+    </form>
+      <div class="cart">
+        <img class="cart__right" src="./img/backCard.png" alt="">
+        <img class="cart__right_big" src="./img/backCard.png" alt="">
+      </div>
+  </main>
+    </main>
+    <script src="./js/script.js"></script>
+</body>
+</html>
