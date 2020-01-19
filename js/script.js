@@ -5,7 +5,6 @@ const qwer = document.querySelectorAll('.fruit_radio').forEach(function (radio) 
   radio.addEventListener('click', function () {
   	if (this.checked) {
       numberCarts=this.value;
-    	console.log(this.value);
     }
   });
 });
@@ -48,10 +47,22 @@ const addTime12 = () => {
     
     cartInner.appendChild(cartBack);
     cartBack.appendChild(createFrontCart);
-    }
+  }
+
+  function getRandomCard() {
+    const flipCards = document.querySelectorAll('.flip-card-back');
+    const backCards = document.querySelectorAll('.card-turn');
+    const bugCard = (function() {
+        return Math.round(Math.random()*(flipCards.length-1));
+    })();
+    backCards[bugCard].src = "img/openCartGag.png";
+}
+getRandomCard();
 
   const allCards = document.querySelectorAll('.flip-card-inner');
-  allCards.forEach(cf=>cf.addEventListener( 'click' , () => cf.classList.add('active-back')));
+  allCards.forEach(cf=>cf.addEventListener( 'click' , () => {
+    cf.classList.add('active-back')
+  }));
 
   const qaz = document.querySelectorAll('.card-turn');
   const qaz1 = document.querySelector('.wrap-card');
@@ -64,6 +75,3 @@ const addTime12 = () => {
 }
 
 addTime.addEventListener('click',addTime12);
-
-
-
