@@ -29,7 +29,7 @@ const addTime12 = () => {
     cartInnerFront.className = 'flip-card-front';
     
     const createBackCart = document.createElement('img');
-    createBackCart.className = 'card-turnoff';
+    createBackCart.className = 'card-turnoff card-og';
 
     const cartBack = document.createElement('div');
     cartBack.className = 'flip-card-back';
@@ -62,16 +62,20 @@ getRandomCard();
   const allCards = document.querySelectorAll('.flip-card-inner');
   allCards.forEach(cf=>cf.addEventListener( 'click' , () => {
     cf.classList.add('active-back')
+    const qaz = document.querySelectorAll('.card-turn');
+    const qaz1 = document.querySelector('.wrap-card');
+    const qaz2 = document.querySelectorAll('.card-turnoff');
+    qaz2.forEach(cfg=>cfg.classList.remove('card-turnoff'))
+
+    qaz.forEach(cfw=>cfw.addEventListener( 'click' , () => {
+    document.body.removeChild(qaz1),
+    addTime1.className = 'wrapper'
   }));
-
-  const qaz = document.querySelectorAll('.card-turn');
-  const qaz1 = document.querySelector('.wrap-card');
- 
-  qaz.forEach(cfw=>cfw.addEventListener( 'click' , () => {
-
-  document.body.removeChild(qaz1),
-  addTime1.className = 'wrapper'
-}));
+    qaz2.forEach(cfw1=>cfw1.addEventListener( 'click' , () => {
+    document.body.removeChild(qaz1),
+    addTime1.className = 'wrapper'
+  }));
+  }));
 }
 
 addTime.addEventListener('click',addTime12);

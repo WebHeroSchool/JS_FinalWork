@@ -101,7 +101,7 @@ body {
   height: 100%;
   backface-visibility: hidden;
 }
-.card-turnoff {
+.card-og {
   width: 190px;
 }
 .card-turn {
